@@ -4,32 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Band</title>
+    <link rel="icon" href="/assets/favicon/favicon.png" type="image/x-icon" />
+
+    <!-- Link CSS -->
     <link rel="stylesheet" href="./assets/font icon/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
     <div id="main">
         <div id="header">
             <ul id="nav">
-                <li><a href="">Home</a></li>
-                <li><a href="">Band</a></li>
-                <li><a href="">Tour</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#band">Band</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li>
                     <a href="#">
                         More 
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                 </li>
             </ul>
+
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
             </div>
         </div>
 
@@ -41,7 +50,7 @@
         </div>
 
         <div id="content">
-            <div class="content-section">
+            <div id="band" class="content-section">
                 <h2 class="section-heading">THE BAND</h2>
                 <p class="section-sub-heading">We love music!</p>
                 <p class="about-text">
@@ -53,22 +62,22 @@
                     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <div class="member-list">
-                    <div class="member-item">
+                    <div class="member-item member-item-mobile ">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/member1.jpg" alt="Name" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="member-item member-item-mobile">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/member1.jpg" alt="Name" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="member-item member-item-mobile">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/member1.jpg" alt="Name" class="member-img">
                     </div>
                 </div>
             </div>
 
-            <div class="tour-section">
+            <div id = "tour" class="tour-section">
                 <div class="content-section">
                     <h2 class="section-heading">TOUR DATES</h2>
                     <p class="section-sub-heading">
@@ -103,7 +112,7 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Saturday 28 November 2015</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo</p>
-                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
+                                <button class="place-buy-btn js-buy-ticket ">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="place-item">
@@ -119,33 +128,33 @@
                 </div>
             </div>
             
-            <div class="content-section">
+            <div id="contact" class="content-section">
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-sub-heading">Fan?Drop a note!</p>
                 
                 <div class="row contact-content">
-                    <div class="col col-half contact-info">
+                    <div class="col col-half contact-info col-full">
                         <p>
                             <i class="ti-location-pin"></i>
                             Chicago, US
                         </p>
                         <p>
                             <i class="ti-mobile"></i>
-                            Phone: +00151515
+                            Phone: <a href="tel:0859900791">0859900791</a>
                         </p>
                         <p>
                             <i class="ti-email"></i>
-                            Email: mail@mail.com
+                            Email: <a href="mailto:bangvan.tran259@gmail.com">bangvan.tran259@gmail.com</a>
                         </p>
                         
                     </div>
-                    <div class="col col-half contact-form">
+                    <div class="col col-half contact-form col-full">
                         <form action="">
                             <div class="row">
-                                <div class="col col-half">
+                                <div class="col col-half col-full">
                                     <input type="text" name="" required class="form-control" placeholder="Name">
                                 </div>
-                                <div class="col col-half">
+                                <div class="col col-half col-full">
                                     <input type="email" name="" required class="form-control" placeholder="Email">
                                 </div>
                             </div>
@@ -154,7 +163,7 @@
                                     <input type="text" name="" required class="form-control" placeholder="Message">
                                 </div>
                             </div>
-                            <input class="form-submit-btn" type="submit" value="SEND">
+                            <input class="form-submit-btn col-full" type="submit" value="SEND">
                         </form>
                     </div>
                 </div>
@@ -261,5 +270,41 @@
         
     </script>
 
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight; //lấy giá trị chiều cao của header
+
+        //
+        mobileMenu.onclick = function () {
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed)
+            {
+                header.style.height = 'auto';
+            }
+            else{
+                header.style.height = null;
+            }
+        }
+        //////////////////////////
+        var menuItems = document.querySelectorAll('#nav li a[href *= "#"]')
+        for(var i =0;i<menuItems.length;i++)
+        {
+            var menuItem = menuItems[i];
+
+            menuItem.onclick = function () {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+
+                if(isParentMenu)
+                {
+                    event.preventDefault();
+                }
+                else{
+                    header.style.height = null;
+                }
+            }
+        }
+
+    </script>
 </body>
 </html>

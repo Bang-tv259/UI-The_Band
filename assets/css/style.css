@@ -28,11 +28,6 @@
     clear: both;
 }
 
-
-
-
-
-
 /* reset css */
 * {
     padding: 0;
@@ -42,6 +37,7 @@
 
 html{
     font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* 
@@ -114,16 +110,33 @@ html{
 #nav .nav-arrow-down{
     font-size: 12px;
 }
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
 #header .search-btn{
     float: right;  
     padding: 0 21px;
 }
+#header .menu-icon,
 #header .search-icon{
     color: #fff;
     font-size: 20px;
     line-height: 46px;
     
 }
+
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000;
+}
+
 #header .search-btn:hover{
     cursor: pointer;
     background-color: #f44336;
@@ -158,9 +171,13 @@ html{
 
 #content .content-section{
     width: 800px;
+    max-width: 100%;
     padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+
 }
 #content .section-heading{
     text-align: center;
@@ -182,10 +199,7 @@ html{
     line-height: 1.4;
 }
 #content .member-list{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 48px;
-    
+    margin-top: 48px;   
 }
 
 #content .member-name{
@@ -235,16 +249,14 @@ html{
 /* ==== PLace ===== */
 .place-list{
     margin-top: 32px;
-    display: flex;
-    
-    
-}
-.place-item:nth-child(2) {
-    margin: 0 28px;
+    display: flex; 
+    justify-content: space-between;      
 }
 .place-item{
+    width: calc(33.3333% - 16px);
     background-color: #fff;
 }
+
 .place-img{
     width: 100%;
 }
@@ -272,7 +284,8 @@ html{
 }
 .place-buy-btn{
     position: relative;
-    margin-left: 28%;
+    display: block;
+    margin: auto;
     /**/
     background-color: #000;
     color: rgb(255, 241, 241);
@@ -285,7 +298,7 @@ html{
     background-color: #555;
     cursor: pointer;
 }
-
+/* contact */
 .contact-content{
     margin-top: 48px;
 }
@@ -296,6 +309,12 @@ html{
 .contact-info i{
     width: 20px;
     display: inline-block;
+}
+.contact-info a{
+    opacity: 0.8;
+}
+.contact-info a:hover{
+    opacity: 1;
 }
 .contact-form{
     font-size: 15px;
@@ -319,6 +338,7 @@ html{
 .form-submit-btn:hover{
     opacity: 0.8;
 }
+/* Map */
 .map-section img{
     width: 100%;
 }
