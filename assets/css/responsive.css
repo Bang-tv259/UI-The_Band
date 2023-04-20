@@ -58,6 +58,9 @@
     #nav{
         display: block;
     }
+    #content .member-name{
+        margin-top: 16px;
+    }
     #content .member-img{  
         width: 60%;
         display: block;   
@@ -79,6 +82,7 @@
     .col-full{
         width: 100%;
     }
+
 
 
 }

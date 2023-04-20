@@ -86,6 +86,7 @@ html{
 }
 
 #nav li a{
+    width: 100%;
     display: block;
     text-decoration: none;
     line-height: 46px;
@@ -355,6 +356,7 @@ html{
     font-size: 24px;
 }
 .socials-list a{
+    font-size: 40px;
     text-decoration: none;
     color: rgba(0,0,0,0.6);
 }
