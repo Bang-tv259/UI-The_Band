@@ -334,6 +334,9 @@ html{
     border: none;
     background-color: #000;
     cursor: pointer;
+    /* xóa bỏ mọi thiêt đặt do máy tự thêm vào */
+    appearance: none;
+    
 }
 .form-submit-btn:hover{
     opacity: 0.8;
