@@ -19,8 +19,7 @@
 .col-half{
     width: 50%;
 }
-.col-full
-{
+.col-full-pc{
     width: 100%;
 }
 
@@ -322,6 +321,7 @@ html{
     font-size: 15px;
 }
 .form-control{
+    
     padding: 10px;
     border: 1px solid #ccc;
     width: 100%;
