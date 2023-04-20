@@ -4,14 +4,14 @@
     46.25 = 740px
     16.1875 = 739px
 */
-@media (min-width: 64em){
+@media (min-width: 1024px){
     #content .member-list{
         display: flex;
         justify-content: space-between;
     }
 }
 /* Tablet */
-@media (min-width: 46.25em)  and (max-width: 63.9375em){
+@media (min-width: 740px)  and (max-width: 1024px){
     #content .member-list {
             display: flex;
             justify-content: space-between;
@@ -21,7 +21,7 @@
     }
 }
 /* Mobile */
-@media (max-width: 46.1875em) {
+@media (max-width: 739px) {
     #slider .text-content {
         bottom: 20px;
     }
